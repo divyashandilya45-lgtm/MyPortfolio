@@ -86,7 +86,7 @@ export function Navbar() {
           scrolled ? "glass py-4 shadow-lg border-b border-white/5" : "bg-transparent py-6"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12">
+        <div className="w-full mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12">
           {/* Logo */}
           <button
             onClick={() => scrollToSection("home")}

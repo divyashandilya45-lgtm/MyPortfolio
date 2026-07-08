@@ -129,7 +129,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative w-[300px] h-[400px] md:w-[350px] md:h-[450px] rounded-2xl overflow-hidden glass p-1 shadow-2xl flex items-center justify-center group"
+            className="relative w-full max-w-[300px] aspect-[3/4] md:max-w-[350px] md:h-[450px] rounded-2xl overflow-hidden glass p-1 shadow-2xl flex items-center justify-center group"
           >
             {/* Ambient Back Glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-accent-purple/20 via-accent-pink/10 to-accent-blue/20 opacity-80" />
