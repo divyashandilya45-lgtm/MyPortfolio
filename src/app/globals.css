@@ -41,9 +41,12 @@
   --gradient-card: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
 }
 
-@theme inline {
-  --color-background: var(--bg-primary);
-  --color-foreground: var(--text-primary);
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
   --color-secondary: var(--text-secondary);
   --color-muted: var(--text-muted);
   --color-accent-indigo: var(--accent-indigo);
@@ -103,7 +106,7 @@ body {
 
 /* ===== Glassmorphism ===== */
 .glass {
-  background: var(--glass-bg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
@@ -111,7 +114,7 @@ body {
 }
 
 .glass-card {
-  background: var(--glass-bg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
@@ -505,8 +508,4 @@ body {
   50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
 }
 
-/* ===== Responsive Utilities ===== */
-@media (max-width: 640px) {
-  h1 { font-size: 2rem !important; }
-  h2 { font-size: 1.5rem !important; }
-}
+

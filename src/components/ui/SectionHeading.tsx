@@ -34,15 +34,10 @@ export function SectionHeading({ title, subtitle, badge, align = "center" }: Sec
         transition={{ duration: 0.6, delay: 0.1 }}
         className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl"
       >
-        {title.split(" ").map((word, index) => {
-          // Highlight last word or custom styling
-          const isLast = index === title.split(" ").length - 1;
-          return (
-            <span key={index} className={isLast ? "gradient-text" : "mr-3"}>
-              {word}{" "}
-            </span>
-          );
-        })}
+        {title.split(" ").slice(0, -1).join(" ")}{" "}
+        <span className="gradient-text">
+          {title.split(" ").slice(-1)[0]}
+        </span>
       </motion.h2>
 
       <motion.p
